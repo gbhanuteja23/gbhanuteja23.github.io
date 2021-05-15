@@ -1,0 +1,68 @@
+body
+{
+	background:green;
+
+	color:white;
+}
+
+a
+{
+	color:blue;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color:yellow;
+	background:black;
+}
+
+.red_link:hover
+{
+	color:red;
+	background: black;
+}
+
+h1
+{
+	font-family: "Times new roman" serif;
+
+	font-size: 40pt;
+}
+
+.indent
+{
+	margin-left: 10px;
+}
+
+.gap_below
+{
+	margin-bottom: 20px;
+}
+
+/* For creating a border around things */
+.thin_border
+{
+	border: 3px solid black;
+}
+
+/* You can add comments in CSS using this */
+
+/* Always add media-queries at the end of the stylesheet. */
+
+@media (max-width:  1000px) 
+{
+	body
+	{
+		background: green;
+	}
+}
+
+@media (max-width: 500px)
+{
+	body
+	{
+		background: black;
+	}
+}
+

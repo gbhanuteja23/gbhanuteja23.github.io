@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>
+		Image Gallery 
+	</title>
+
+       <link rel="stylesheet"
+             type="text/css"
+             href="bootstrap.css" >
+    
+    <! You can add custom stylesheets but add them after bootstrap like this>
+
+        <link rel="stylesheet"
+             type="text/css"
+             href="styles.css" >
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="gallery.css" >
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+
+<body ">
+
+       <a href="index.html"> Home Page</a>
+       
+       &nbsp  
+       &nbsp
+
+       <a href=" aboutme.html"> About Me </a>       
+       
+       &nbsp
+       &nbsp
+
+       <a href="contactme.html" class="red_link"> Contact Me</a>
+
+       &nbsp
+       &nbsp
+
+       <hr>
+       <br>
+       
+       <div class="container">
+
+            <h1> Image Gallery </h1>
+
+            <!--
+               These are the thumbnail images.
+               They are laid out using the 
+               bootstrap grid.
+               I have given them all the class name
+               "crop-image" which I have used in the
+               css and the javascript code.
+            -->
+
+            <div class="row">
+                  <div class="col-md-3">
+                       <img class="crop-img"
+                            src="1.jpg"
+                            alt="Gurgaon Cyberhub Skyscraper" >
+                  </div>
+
+                  <div class="col-md-3">
+                       <img class="crop-img"
+                            src="2.jpg"
+                            alt="Gurgaon Skyline">
+                  </div>
+
+                  <div class="col-md-3">
+                       <img class="crop-img"
+                            src="3.jpg"
+                            alt="Cyberhub Buildings" >
+                  </div>
+
+                  <div class="col-m-3">
+                       <img class="crop-img"
+                            src="4.jpg"
+                            alt="Ambience Mall, Gurgaon" >
+                  </div>
+            </div>
+
+            <!--
+              this is the large image which is
+              on a row of its own. 
+              I will change it's source(src) in the 
+              javascript
+            -->
+
+            <div class="row">
+                 <div class="col-md-12">
+                      <img id="BigImage"
+                           class="large-img"
+                           src="1.jpg"
+                           alt="Gurgaon Cyberhub Skyscraper" >
+                  </div>
+            </div>
+       </div>
+
+       <script type="text/Javascript">          
+          // when we click on the thumbnail
+          // we set the src attribute of the 
+          // big image to be the same as the 
+          // src of the image we have clicked on
+          // ("this"). This loads the same
+          // image file into the big image
+
+          $(".crop-img").click(function (){
+               $("#BigImage").attr('src',
+                  $(this).attr('src'));
+          });
+
+       </script>
+  
+
+       <br>
+   
+
+</body>
+
+</html>

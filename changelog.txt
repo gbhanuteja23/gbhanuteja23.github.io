@@ -1,3 +1,19 @@
+Version: 3.0.0 (October 2026)
+  - Complete modern redesign of the portfolio: Cyber-industrial dark mode with NVIDIA Green (#76b900), EY Gold (#FFE600), and Cyan (#38bdf8) styling.
+  - Added current job at EY (Ernst & Young / EY-GDS) as Senior Software Engineer (June 2026 - Present).
+  - Added MapmyIndia (CE Info Systems) experience:
+      * Senior Software Engineer (January 2025 - June 2026)
+      * Software Engineer (October 2022 - January 2025)
+  - Updated Jio Tesseract (Tesseract Imaging Ltd) timeline: January 2022 - October 2022.
+  - Added dedicated flagship showcase for Opti-Flow AI Agent (NVIDIA - GSI Hackathon Top 20 Finalist out of 350+ teams).
+  - Integrated high-resolution photo and architecture gallery with interactive lightbox modal (NVIDIA India HQ, stage presentation, 3D layouts, EY office, Isaac Sim digital twin, end-to-end architecture).
+  - Built dedicated standalone case study page: portfolio-optiflow-details.html.
+  - Redesigned skills into 4 modern categorized competency cards (Agentic AI, Spatial Computing/XR, Full-Stack, Cloud/DevOps).
+  - Enhanced portfolio filter navigation (All, AI & Digital Twins, AR/VR, Robotics, Games/Python).
+  - Added one-click Copy Email to clipboard with visual feedback and static-compatible direct message form.
+  - Modernized all sub-pages with dark mode styling and back navigation bar.
+  - Created VERSION_HISTORY.md documenting all post-2022 career milestones and technical changes.
+
 Version: 2.2.1
   - Updated Bootstrap to version 4.6.0
   - Updated all outdated third party vendor libraries to their latest versions

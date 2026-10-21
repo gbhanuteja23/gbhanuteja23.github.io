@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Opti-Flow AI Agent | NVIDIA GSI Hackathon Case Study | G Bhanuteja</title>
+  <meta content="Opti-Flow AI Agent - Case Study by G Bhanuteja & Team AutoRoute Agents (EY-GDS). Selected Top 20 Finalist out of 350+ teams in the NVIDIA GSI Hackathon, presented live at NVIDIA India HQ." name="description">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Main Custom CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body style="background: var(--bg-dark); color: var(--text-dim);">
+
+  <!-- Floating Nav Header -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-badge">GB</span>
+        <span>G Bhanuteja</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html#hero"><i class="bx bx-home-alt"></i> <span>Home</span></a></li>
+        <li class="active"><a href="#"><i class="bx bx-trophy text-warning"></i> <span>Opti-Flow Case Study</span></a></li>
+        <li><a href="index.html#experience"><i class="bx bx-briefcase"></i> <span>Experience</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bx bx-grid-alt"></i> <span>Projects</span></a></li>
+        <li><a href="index.html#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+      </ul>
+
+      <a href="index.html" class="nav-cta" style="background: var(--accent-nvidia); color:#000 !important;">
+        <i class="bx bx-arrow-back"></i> <span>Back to Main</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main" style="padding-top: 7rem; padding-bottom: 5rem;">
+    <div class="container">
+      
+      <!-- Breadcrumb -->
+      <div class="mb-4">
+        <a href="index.html#hackathon" class="btn-modern btn-outline-glass" style="padding: 0.4rem 1rem; font-size: 0.85rem;">
+          <i class="bx bx-left-arrow-alt"></i> Back to Main Portfolio
+        </a>
+      </div>
+
+      <!-- Hero Header for Case Study -->
+      <div class="hackathon-spotlight-card mb-5" data-aos="fade-up">
+        
+        <div class="spotlight-badge-row">
+          <span class="spotlight-pill pill-finalist">
+            <i class="bx bx-trophy"></i> Top 20 Finalist (Out of 350 Teams)
+          </span>
+          <span class="spotlight-pill pill-ey">
+            <i class="bx bx-group"></i> Team AutoRoute Agents (EY-GDS)
+          </span>
+          <span class="spotlight-pill pill-location">
+            <i class="bx bx-map-pin"></i> NVIDIA India HQ, Bangalore &nbsp;|&nbsp; Sept 2026
+          </span>
+        </div>
+
+        <h1 class="spotlight-title" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+          Opti-Flow AI Agent: Real-Time Dynamic Warehouse Spatial Optimization &amp; Multi-Agent Simulation
+        </h1>
+
+        <p class="spotlight-lead">
+          We are thrilled to announce that our team, <strong>AutoRoute Agents</strong>, was selected as one of the <strong>top 20 finalists out of 350 teams</strong> who registered for the <strong>NVIDIA - GSI Hackathon</strong>. It was an absolute privilege to present our solution, <em>Opti-Flow AI Agent</em>, live at the NVIDIA India headquarters in Bangalore.
+        </p>
+
+        <div class="d-flex flex-wrap gap-2 pt-2">
+          <span class="tech-tag-pill">#NVIDIA</span>
+          <span class="tech-tag-pill">#GSIHackathon</span>
+          <span class="tech-tag-pill">#AgenticAI</span>
+          <span class="tech-tag-pill">#cuOpt</span>
+          <span class="tech-tag-pill">#Nemotron3Nano</span>
+          <span class="tech-tag-pill">#NvidiaNIM</span>
+          <span class="tech-tag-pill">#IsaacSim</span>
+          <span class="tech-tag-pill">#Omniverse</span>
+          <span class="tech-tag-pill">#EY</span>
+        </div>
+
+      </div>
+
+      <!-- Problem Statement & Goal -->
+      <div class="row mb-5">
+        
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="arch-card" style="height: 100%;">
+            <div class="arch-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444;">
+              <i class="bx bx-error-circle"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight:700; margin-bottom: 0.75rem;">The Challenge</h3>
+            <p style="font-size: 0.98rem; color: var(--text-dim); line-height: 1.7;">
+              In automated high-throughput warehouses, unexpected disruptions are daily occurrences:
+            </p>
+            <ul style="color: var(--text-muted); font-size: 0.92rem; padding-left: 1.25rem; margin-top: 0.5rem; line-height: 1.7;">
+              <li>Sudden priority rushes requiring immediate reordering of pick tasks.</li>
+              <li>Blocked aisles due to spills, equipment malfunctions, or physical obstacles.</li>
+              <li>Heuristic route algorithms operating as opaque black boxes that leave operators unable to review or verify path validity before triggering robots.</li>
+              <li>High-latency recalculations causing idling fleets and warehouse gridlock.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="arch-card" style="height: 100%;">
+            <div class="arch-icon" style="background: rgba(118, 185, 0, 0.18); color: var(--accent-nvidia);">
+              <i class="bx bx-target-lock"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; font-weight:700; margin-bottom: 0.75rem;">The Goal</h3>
+            <p style="font-size: 0.98rem; color: var(--text-dim); line-height: 1.7;">
+              Empower warehouse operators to dynamically adapt to disruptions in real time by:
+            </p>
+            <ul style="color: var(--text-muted); font-size: 0.92rem; padding-left: 1.25rem; margin-top: 0.5rem; line-height: 1.7;">
+              <li>Evaluating pick capacities and dynamically shifting vehicle schedules on the fly.</li>
+              <li>Handling priority shifts interactively with natural language commands.</li>
+              <li>Verifying 3D route changes across intuitive digital layouts before pushing to physical execution.</li>
+              <li>Running end-to-end physics validation in simulation to prevent real-world robot collisions.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Technical Architecture Breakdown -->
+      <div class="hackathon-spotlight-card mb-5" data-aos="fade-up">
+        
+        <h2 style="font-size: 1.75rem; font-weight:800; margin-bottom: 1.5rem; display:flex; align-items:center; gap:0.6rem;">
+          <i class="bx bx-layer text-info"></i> Two-Tier Architecture &amp; NVIDIA Tech Stack
+        </h2>
+
+        <p style="font-size: 1.05rem; color: var(--text-dim); line-height: 1.7; margin-bottom: 2rem;">
+          In just three weeks, we conceptualized and built two powerful tools to address real-world challenges, combining browser spatial telemetry with high-fidelity physics simulation and GPU-accelerated microservices:
+        </p>
+
+        <div class="arch-grid mb-4">
+          
+          <div class="arch-card">
+            <div class="arch-icon">
+              <i class="bx bx-window-alt"></i>
+            </div>
+            <h4>Tier 1: Lightweight React + Three.js UI</h4>
+            <p>
+              Provides immediate operator visualization on any web browser. Supervisors view real-time 3D warehouse layouts, trigger synthetic obstacle simulations (e.g., closing Aisle A3-S), inspect graph-based routing paths, and review proposals with a human-in-the-loop review mechanism.
+            </p>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-icon" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">
+              <i class="bx bx-bot"></i>
+            </div>
+            <h4>Tier 2: Omniverse Extension &amp; Isaac Sim</h4>
+            <p>
+              A custom NVIDIA Omniverse Extension driving Isaac Sim for high-fidelity physics validation. Stages photorealistic USD warehouse environments and simulates robotic Autonomous Mobile Robots (Clearpath Ridgeback Franka AMR), validating collision-free navigation and payload constraints.
+            </p>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-icon" style="background: rgba(118, 185, 0, 0.18); color: #76b900;">
+              <i class="bx bx-bolt-circle"></i>
+            </div>
+            <h4>NVIDIA cuOpt Microservice</h4>
+            <p>
+              GPU-accelerated routing optimization microservice running on cluster port 8000. Resolves complex warehouse picking routes, multi-picker capacity schedules, and vehicle stop orders in sub-second intervals, replacing slow traditional CPU solvers.
+            </p>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-icon" style="background: rgba(255, 230, 0, 0.15); color: #ffe600;">
+              <i class="bx bx-conversation"></i>
+            </div>
+            <h4>NVIDIA NIM &amp; Nemotron 3 Nano Omni</h4>
+            <p>
+              Interprets natural language supervisor planning requests into structured JSON tool calls (<code style="color:#76b900;">get_warehouse_state</code>, <code style="color:#76b900;">propose_picking_plan</code>). Ensures the agent cannot approve or dispatch orders without human-in-the-loop operator confirmation.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- B300 GPU Cluster Callout -->
+        <div style="background: rgba(118, 185, 0, 0.08); border: 1px solid rgba(118, 185, 0, 0.3); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 2rem;">
+          <h4 style="font-size: 1.15rem; color: var(--accent-nvidia); margin-bottom: 0.5rem; display:flex; align-items:center; gap:0.5rem;">
+            <i class="bx bx-chip"></i> Local Deployment on NVIDIA B300 GPU Cluster
+          </h4>
+          <p style="font-size: 0.95rem; color: var(--text-dim); margin: 0; line-height: 1.65;">
+            Both the NVIDIA cuOpt microservice and the Nemotron 3 Nano Omni models ran entirely locally on the high-performance <strong>NVIDIA B300 GPU cluster</strong> provided by the organizers, delivering near-instantaneous replanning, ultra-low latency spatial inference, and smooth multi-agent orchestration.
+          </p>
+        </div>
+
+        <!-- Takeaway Banner -->
+        <div class="takeaway-quote-box">
+          <h5>The Core Takeaway</h5>
+          <blockquote>
+            &ldquo;Effective industrial AI isn't simply about solving an optimization algorithm in a black box. It's about bridging mathematical precision with spatial clarity — giving operators interactive, explainable, and human-in-the-loop control over complex automated environments.&rdquo;
+          </blockquote>
+        </div>
+
+      </div>
+
+      <!-- Live Presentation & Slides Visuals -->
+      <div class="mb-5" data-aos="fade-up">
+        
+        <h2 style="font-size: 1.75rem; font-weight:800; margin-bottom: 1.5rem; display:flex; align-items:center; gap:0.6rem;">
+          <i class="bx bx-images text-warning"></i> Photo &amp; Architecture Gallery
+        </h2>
+
+        <div class="row g-4">
+          
+          <div class="col-md-6">
+            <div class="hero-portrait-card" style="max-width: 100%;">
+              <div class="portrait-img-box" style="aspect-ratio: 16 / 10;">
+                <img src="assets/img/ey-things/6.jpg" alt="End to End Architecture">
+              </div>
+              <div style="padding: 1rem 0 0.5rem;">
+                <h4 style="font-size: 1.05rem; font-weight:700; color:var(--text-main); margin-bottom:0.2rem;">Complete System Architecture</h4>
+                <p style="font-size: 0.85rem; color:var(--text-muted); margin:0;">
+                  Supervisor UI (React/Three.js) &rarr; Orchestrator (Node API) &rarr; NVIDIA NIM (Nemotron 3 Nano) &rarr; NVIDIA cuOpt solver.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="hero-portrait-card" style="max-width: 100%;">
+              <div class="portrait-img-box" style="aspect-ratio: 16 / 10;">
+                <img src="assets/img/ey-things/5.jpg" alt="NVIDIA Isaac Sim Digital Twin">
+              </div>
+              <div style="padding: 1rem 0 0.5rem;">
+                <h4 style="font-size: 1.05rem; font-weight:700; color:var(--text-main); margin-bottom:0.2rem;">Isaac Sim Robotics Digital Twin</h4>
+                <p style="font-size: 0.85rem; color:var(--text-muted); margin:0;">
+                  Real-time USD physics simulation in Isaac Sim 6.0.1 driving Clearpath Ridgeback Franka robot through cuOpt routes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="hero-portrait-card" style="max-width: 100%;">
+              <div class="portrait-img-box" style="aspect-ratio: 16 / 10;">
+                <img src="assets/img/ey-things/3.jpg" alt="Opti-Flow 3D Evolution">
+              </div>
+              <div style="padding: 1rem 0 0.5rem;">
+                <h4 style="font-size: 1.05rem; font-weight:700; color:var(--text-main); margin-bottom:0.2rem;">3D Warehouse Layout &amp; Route Evolution</h4>
+                <p style="font-size: 0.85rem; color:var(--text-muted); margin:0;">
+                  Interactive 3D graph-based aisle routing, synthetic scenario generator, and real-time replanning review.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="hero-portrait-card" style="max-width: 100%;">
+              <div class="portrait-img-box" style="aspect-ratio: 16 / 10;">
+                <img src="assets/img/ey-things/2.jpg" alt="Team AutoRoute Agents on Stage">
+              </div>
+              <div style="padding: 1rem 0 0.5rem;">
+                <h4 style="font-size: 1.05rem; font-weight:700; color:var(--text-main); margin-bottom:0.2rem;">Live Stage Presentation at NVIDIA HQ</h4>
+                <p style="font-size: 0.85rem; color:var(--text-muted); margin:0;">
+                  G Bhanuteja &amp; teammate presenting live at NVIDIA India headquarters in Bangalore before judges and organizers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Acknowledgements and Leadership Support -->
+      <div class="acknowledgements-card mb-5" data-aos="fade-up">
+        
+        <h3 style="font-size: 1.35rem; font-weight:800; color:var(--accent-ey); margin-bottom:1.25rem; display:flex; align-items:center; gap:0.5rem;">
+          <i class="bx bx-trophy"></i> Mentorship, Collaboration &amp; Acknowledgements
+        </h3>
+
+        <p style="color:var(--text-dim); line-height:1.7; margin-bottom:1.5rem;">
+          We could not have accomplished this without the guidance and support of our incredible mentor, 
+          <a href="https://www.linkedin.com/in/amlan-panigrahi-5aa5a162/" target="_blank" rel="noopener noreferrer"><strong>Amlan Panigrahi</strong></a>. A big thank you for your invaluable inputs throughout the development process.
+        </p>
+
+        <p style="color:var(--text-dim); line-height:1.7; margin-bottom:1.5rem;">
+          We would also like to extend our deepest gratitude to the esteemed judges 
+          <a href="https://www.linkedin.com/in/sundar-r-nagalingam-b5554857/" target="_blank" rel="noopener noreferrer"><strong>Sundar R Nagalingam</strong></a> and 
+          <a href="https://www.linkedin.com/in/sauravagarwal/" target="_blank" rel="noopener noreferrer"><strong>Saurav Agarwal</strong></a> for their insightful feedback, as well as the GSI Hackathon organizers, 
+          <a href="https://www.linkedin.com/in/apoorva-laharia-239033b2/" target="_blank" rel="noopener noreferrer"><strong>Apoorva Laharia</strong></a>, 
+          <a href="https://www.linkedin.com/in/kgsapuroop/" target="_blank" rel="noopener noreferrer"><strong>Ganesh Sai Apuroop Koppaka</strong></a>, and 
+          <a href="https://www.linkedin.com/in/bharatkumar-sharma-a631755/" target="_blank" rel="noopener noreferrer"><strong>Bharatkumar Sharma</strong></a>. We are inspired by your suggestions and are excited to explore integrating the remaining features that time didn't allow during the competition.
+        </p>
+
+        <p style="color:var(--text-dim); line-height:1.7; margin-bottom:1.5rem;">
+          A huge shoutout to my fantastic teammates: 
+          <a href="https://www.linkedin.com/in/s-gnana-prakash/" target="_blank" rel="noopener noreferrer"><strong>Gnana Prakash S</strong></a>, 
+          <a href="https://www.linkedin.com/in/shashankgoud619/" target="_blank" rel="noopener noreferrer"><strong>Shashank Goud J</strong></a>, and 
+          <strong>Alagappan</strong> for the tireless collaboration over the past 3 weeks.
+        </p>
+
+        <p style="color:var(--text-dim); line-height:1.7; margin-bottom:2rem;">
+          Finally, a massive thank you to the 
+          <a href="https://www.linkedin.com/company/ernstandyoung/" target="_blank" rel="noopener noreferrer"><strong>EY</strong></a> Leadership team for enabling this amazing opportunity and supporting our participation: 
+          <a href="https://www.linkedin.com/in/srinigopalan/" target="_blank" rel="noopener noreferrer"><strong>Srinivasagopalan Venkataraman</strong></a>, 
+          <a href="https://www.linkedin.com/in/shyama-hariharan/" target="_blank" rel="noopener noreferrer"><strong>Shyama Hariharan</strong></a>, 
+          <a href="https://www.linkedin.com/in/indraneel-ghosh-927211/" target="_blank" rel="noopener noreferrer"><strong>Indraneel Ghosh</strong></a>, and 
+          <a href="https://www.linkedin.com/in/pranavburadkar/" target="_blank" rel="noopener noreferrer"><strong>Pranav Buradkar</strong></a>.
+        </p>
+
+        <div style="background: rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:var(--radius-sm); padding:1rem; text-align:center;">
+          <h4 style="font-size:1.1rem; color:var(--text-main); margin-bottom:0.25rem;">
+            &ldquo;We are incredibly proud of what we've built and cannot wait to take Opti-Flow AI Agent to the next stage.&rdquo;
+          </h4>
+        </div>
+
+      </div>
+
+      <!-- Navigation Footer -->
+      <div class="text-center pt-3">
+        <a href="index.html" class="btn-modern btn-primary-nvidia">
+          <i class="bx bx-home-alt"></i> <span>Return to Main Portfolio</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <div class="brand-badge" style="width: 40px; height: 40px; font-size: 1.1rem; margin-bottom: 1rem;">GB</div>
+      <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.3rem;">G Bhanuteja</h3>
+      <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 500px;">
+        Senior Software Engineer @ EY &nbsp;|&nbsp; NVIDIA GSI Hackathon Finalist
+      </p>
+      <div class="footer-copyright">
+        &copy; 2026 <strong>G Bhanuteja</strong>. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
